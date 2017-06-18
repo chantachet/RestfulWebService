@@ -18,14 +18,14 @@ How to Run Project
         - open Command Prompt in project folder
         - activator run
     3. run with IntelliJ IDEA
-    - Import project to IntelliJ IDEA
-    - Select Menu Run -> Edit Configurations
+        - Import project to IntelliJ IDEA
+        - Select Menu Run -> Edit Configurations
                       -> +
                       -> Select SBT Task
                       -> fill run in Tasks
                       -> Apply
                       -> OK
-    - Click Run Project
+         - Click Run Project
     4. open http://localhost:9000/ in Google Chrome
     5. Click "Apply this script now!" to create Database
     6. finish setup
