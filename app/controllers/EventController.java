@@ -8,6 +8,7 @@ import play.libs.Json;
 import play.mvc.BodyParser;
 import play.mvc.Controller;
 import play.mvc.Result;
+import views.html.index;
 
 import java.util.List;
 
@@ -16,7 +17,7 @@ import static play.libs.Json.toJson;
 public class EventController extends Controller {
 
     public Result index() {
-        return ok();
+        return ok(index.render(""));
     }
 
     @BodyParser.Of(BodyParser.Json.class)

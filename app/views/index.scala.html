@@ -1,7 +1,4 @@
-@*
- * This template takes a single argument, a String containing a
- * message to display.
- *@
+
 @(message: String)
 
 @*
@@ -9,12 +6,511 @@
  * argument is a `String` with the title of the page, the second
  * argument is an `Html` object containing the body of the page.
  *@
-@main("Welcome to Play") {
+@main("API") {
 
     @*
      * Get an `Html` object by calling the built-in Play welcome
      * template and passing a `String` message.
      *@
-    @play20.welcome(message, style = "Java")
+    @(message)
 
+    <div class="container">
+        <br>
+        <div class="row">
+            <h3>Task</h3>
+            <hr style="width: 100%; color: black; height: 1px; background-color:black;" />
+        </div>
+        <div class="row">
+            <div class="panel panel-primary">
+                <div class="panel-body">
+                    <div clas="row">
+                        <div class="col-lg-1">
+                            <button type="button" class="btn btn-primary btn-block">GET</button>
+                        </div>
+                        <div class="col-lg-3">
+                            <h4>events/getAll</h4>
+                        </div>
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-2"><p>get list all of tasks</p></div>
+                    </div>
+                    <hr style="width: 100%; color: black; height: 1px; background-color:#428bca" />
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <p>Parameters</p>
+                        </div>
+                        <div class="col-lg-10">
+                            <p>No parameters</p>
+                        </div>
+                    </div>
+                    <hr style="width: 100%; color: black; height: 1px; background-color:#428bca" />
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <p>Responses</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1">
+                        </div>
+                        <div class="col-lg-10">
+                            <pre id="json"></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="panel panel-primary">
+                <div class="panel-body">
+                    <div clas="row">
+                        <div class="col-lg-1">
+                            <button type="button" class="btn btn-primary btn-block">GET</button>
+                        </div>
+                        <div class="col-lg-3">
+                            <h4>events/getById/id</h4>
+                        </div>
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-2"><p>get task</p></div>
+                    </div>
+                    <hr style="width: 100%; color: black; height: 1px; background-color:#428bca" />
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <p>Parameters</p>
+                        </div>
+                        <div class="col-lg-10">
+                            <p>No parameters</p>
+                        </div>
+                    </div>
+                    <hr style="width: 100%; color: black; height: 1px; background-color:#428bca" />
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <p>Responses</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1">
+                        </div>
+                        <div class="col-lg-10">
+                            <pre id="ids"></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="panel panel-success">
+                <div class="panel-body">
+                    <div clas="row">
+                        <div class="col-lg-1">
+                            <button type="button" class="btn btn-success btn-block">POST</button>
+                        </div>
+                        <div class="col-lg-3">
+                            <h4>events/create</h4>
+                        </div>
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-2"><p>add new task</p></div>
+                    </div>
+                    <hr style="width: 100%; color: black; height: 1px; background-color:#5cb85c" />
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <p>Parameters</p>
+                        </div>
+                        <div class="col-lg-10">
+                            <pre id="tbo"></pre>
+                        </div>
+                    </div>
+                    <hr style="width: 100%; color: black; height: 1px; background-color:#5cb85c" />
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <p>Responses</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1">
+                        </div>
+                        <div class="col-lg-5">
+                            <p>true</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="panel panel-warning">
+                <div class="panel-body">
+                    <div clas="row">
+                        <div class="col-lg-1">
+                            <button type="button" class="btn btn-warning btn-block">PUT</button>
+                        </div>
+                        <div class="col-lg-3">
+                            <h4>events/update/id</h4>
+                        </div>
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-2"><p>update task</p></div>
+                    </div>
+                    <hr style="width: 100%; color: black; height: 1px; background-color:#f0ad4e" />
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <p>Parameters</p>
+                        </div>
+                        <div class="col-lg-10">
+                            <pre id="tba"></pre>
+                        </div>
+                    </div>
+                    <hr style="width: 100%; color: black; height: 1px; background-color:#f0ad4e" />
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <p>Responses</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1">
+                        </div>
+                        <div class="col-lg-5">
+                            <p>true</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="panel panel-danger">
+                <div class="panel-body">
+                    <div clas="row">
+                        <div class="col-lg-1">
+                            <button type="button" class="btn btn-danger btn-block">DELETE</button>
+                        </div>
+                        <div class="col-lg-3">
+                            <h4>events/delete/id</h4>
+                        </div>
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-2"><p>delete task</p></div>
+                    </div>
+                    <hr style="width: 100%; color: black; height: 1px; background-color:#d9534f" />
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <p>Parameters</p>
+                        </div>
+                        <div class="col-lg-10">
+                            <p>No Parameters</p>
+                        </div>
+                    </div>
+                    <hr style="width: 100%; color: black; height: 1px; background-color:#d9534f" />
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <p>Responses</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1">
+                        </div>
+                        <div class="col-lg-5">
+                            <p>true</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <h3>Task Detail</h3>
+            <hr style="width: 100%; color: black; height: 1px; background-color:black;" />
+        </div>
+        <br>
+        <div class="row">
+            <div class="panel panel-primary">
+                <div class="panel-body">
+                    <div clas="row">
+                        <div class="col-lg-1">
+                            <button type="button" class="btn btn-primary btn-block">GET</button>
+                        </div>
+                        <div class="col-lg-3">
+                            <h4>events/getDetailAll</h4>
+                        </div>
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-2"><p>get list all of task details</p></div>
+                    </div>
+                    <hr style="width: 100%; color: black; height: 1px; background-color:#428bca" />
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <p>Parameters</p>
+                        </div>
+                        <div class="col-lg-10">
+                            <p>No parameters</p>
+                        </div>
+                    </div>
+                    <hr style="width: 100%; color: black; height: 1px; background-color:#428bca" />
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <p>Responses</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1">
+                        </div>
+                        <div class="col-lg-10">
+                            <pre id="tas"></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="panel panel-primary">
+                <div class="panel-body">
+                    <div clas="row">
+                        <div class="col-lg-1">
+                            <button type="button" class="btn btn-primary btn-block">GET</button>
+                        </div>
+                        <div class="col-lg-3">
+                            <h4>events/getDetailById/id</h4>
+                        </div>
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-2"><p>get task details</p></div>
+                    </div>
+                    <hr style="width: 100%; color: black; height: 1px; background-color:#428bca" />
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <p>Parameters</p>
+                        </div>
+                        <div class="col-lg-10">
+                            <p>No parameters</p>
+                        </div>
+                    </div>
+                    <hr style="width: 100%; color: black; height: 1px; background-color:#428bca" />
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <p>Responses</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1">
+                        </div>
+                        <div class="col-lg-10">
+                            <pre id="taste"></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="panel panel-success">
+                <div class="panel-body">
+                    <div clas="row">
+                        <div class="col-lg-1">
+                            <button type="button" class="btn btn-success btn-block">POST</button>
+                        </div>
+                        <div class="col-lg-3">
+                            <h4>events/addTaskDetail/task_id</h4>
+                        </div>
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-2"><p>add new detail of task</p></div>
+                    </div>
+                    <hr style="width: 100%; color: black; height: 1px; background-color:#5cb85c" />
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <p>Parameters</p>
+                        </div>
+                        <div class="col-lg-10">
+                            <pre id="ads"></pre>
+                        </div>
+                    </div>
+                    <hr style="width: 100%; color: black; height: 1px; background-color:#5cb85c" />
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <p>Responses</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1">
+                        </div>
+                        <div class="col-lg-5">
+                            <p>true</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="panel panel-warning">
+                <div class="panel-body">
+                    <div clas="row">
+                        <div class="col-lg-1">
+                            <button type="button" class="btn btn-warning btn-block">PUT</button>
+                        </div>
+                        <div class="col-lg-3">
+                            <h4>events/update/taskDetail_id</h4>
+                        </div>
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-2"><p>update task detail</p></div>
+                    </div>
+                    <hr style="width: 100%; color: black; height: 1px; background-color:#f0ad4e" />
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <p>Parameters</p>
+                        </div>
+                        <div class="col-lg-10">
+                            <pre id="uds"></pre>
+                        </div>
+                    </div>
+                    <hr style="width: 100%; color: black; height: 1px; background-color:#f0ad4e" />
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <p>Responses</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1">
+                        </div>
+                        <div class="col-lg-5">
+                            <p>true</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="panel panel-danger">
+                <div class="panel-body">
+                    <div clas="row">
+                        <div class="col-lg-1">
+                            <button type="button" class="btn btn-danger btn-block">DELETE</button>
+                        </div>
+                        <div class="col-lg-3">
+                            <h4>events/delete/taskDetail_id</h4>
+                        </div>
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-2"><p>delete task detail</p></div>
+                    </div>
+                    <hr style="width: 100%; color: black; height: 1px; background-color:#d9534f" />
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <p>Parameters</p>
+                        </div>
+                        <div class="col-lg-10">
+                            <p>No Parameters</p>
+                        </div>
+                    </div>
+                    <hr style="width: 100%; color: black; height: 1px; background-color:#d9534f" />
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <p>Responses</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1">
+                        </div>
+                        <div class="col-lg-5">
+                            <p>true</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    var data = [
+    {
+        "id": 0,
+        "subject": "string",
+        "details": [
+            {
+                "id": 0,
+                "title": "string",
+                "status": "string"
+            },
+            {
+                "id": 0,
+                "title": "string",
+                "status": "string"
+            }
+        ]
+    },
+    {
+        "id": 0,
+        "subject": "string",
+        "details": [
+            {
+                "id": 0,
+                "title": "string",
+                "status": "string"
+            },
+            {
+                "id": 0,
+                "title": "string",
+                "status": "string"
+            }
+        ]
+    }
+]
+
+var aa = {
+        "id": 0,
+        "subject": "string",
+        "details": [
+            {
+                "id": 0,
+                "title": "string",
+                "status": "string"
+            },
+            {
+                "id": 0,
+                "title": "string",
+                "status": "string"
+            }
+        ]
+    }
+
+var bb = {
+        "id": 0,
+        "subject": "string"}
+
+var cc =  [
+    {
+        "id": 0,
+        "title": "string",
+        "status": "string"
+    },
+    {
+        "id": 0,
+        "title": "string",
+        "status": "string"
+    },
+    {
+        "id": 0,
+        "title": "string",
+        "status": "string"
+    },
+    {
+        "id": 0,
+        "title": "string",
+        "status": "string"
+    }
+]
+
+var dd =  {
+        "id": 0,
+        "title": "string",
+        "status": "string"
+    }
+
+ var ee = {
+	"title":"string",
+	"status":"string"
+}
+
+var ff = {
+	"id":0,
+	"title":"string",
+	"status":"string"
+}
+document.getElementById("json").innerHTML = JSON.stringify(data, undefined, 2);
+document.getElementById("ids").innerHTML = JSON.stringify(aa, undefined, 2);
+document.getElementById("tbo").innerHTML = JSON.stringify(bb, undefined, 2);
+document.getElementById("tba").innerHTML = JSON.stringify(bb, undefined, 2);
+document.getElementById("tas").innerHTML = JSON.stringify(cc, undefined, 2);
+document.getElementById("taste").innerHTML = JSON.stringify(dd, undefined, 2);
+document.getElementById("ads").innerHTML = JSON.stringify(ee, undefined, 2);
+document.getElementById("uds").innerHTML = JSON.stringify(ff, undefined, 2);
+</script>
 }
